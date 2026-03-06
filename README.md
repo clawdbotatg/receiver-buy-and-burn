@@ -6,8 +6,8 @@ A permissionless smart contract that receives USDC, ETH, or CLAWD, swaps everyth
 
 | Network | Address |
 |---------|---------|
-| Base    | [`0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B`](https://basescan.org/address/0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B) _(not yet deployed)_ |
-| Ethereum Mainnet | [`0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B`](https://etherscan.io/address/0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B) _(not yet deployed)_ |
+| Base    | [`0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d`](https://basescan.org/address/0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d) _(not yet deployed)_ |
+| Ethereum Mainnet | [`0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d`](https://etherscan.io/address/0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d) _(not yet deployed)_ |
 
 > Same address on every chain — deployed via [Nick's CREATE2 factory](https://github.com/Arachnid/deterministic-deployment-proxy) with a mined salt to get the `0xC1a3d` vanity prefix.
 
