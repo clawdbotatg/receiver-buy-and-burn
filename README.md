@@ -6,10 +6,12 @@ A permissionless smart contract that receives USDC, ETH, or CLAWD, swaps everyth
 
 | Network | Address |
 |---------|---------|
-| Base    | _TBD — not yet deployed_ |
-| Ethereum Mainnet | _TBD_ |
+| Base    | [`0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B`](https://basescan.org/address/0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B) _(not yet deployed)_ |
+| Ethereum Mainnet | [`0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B`](https://etherscan.io/address/0xC1a3dcb24C53DA3E5FB22679017EB64724B43b6B) _(not yet deployed)_ |
 
-**ENS Name:** TBD
+> Same address on every chain — deployed via [Nick's CREATE2 factory](https://github.com/Arachnid/deterministic-deployment-proxy) with a mined salt to get the `0xC1a3d` vanity prefix.
+
+**ENS Name:** TBD (`burn.clawd.eth` or similar)
 
 ## Key Addresses (Base)
 
@@ -24,7 +26,7 @@ A permissionless smart contract that receives USDC, ETH, or CLAWD, swaps everyth
 ## How It Works
 
 1. Send USDC, ETH, or CLAWD to the contract address
-2. Anyone calls `swapAndBurn()`
+2. Anyone calls `execute()`
 3. ETH → WETH → CLAWD (1% pool), USDC → WETH → CLAWD (multihop via 0.05% + 1% pools)
 4. All CLAWD sent to `0x...dEaD` (burned forever)
 
