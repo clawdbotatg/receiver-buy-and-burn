@@ -8,7 +8,7 @@ A permissionless smart contract that receives ETH, USDC, or CLAWD on Base and bu
 |---------|---------|
 | Base | [`0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad`](https://basescan.org/address/0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad) ✅ Live |
 
-> Same vanity address on every EVM chain — deployed via [Nick's CREATE2 factory](https://github.com/Arachnid/deterministic-deployment-proxy). Address reads **`0x0·C1a3D·B07`** = *clawd-bot*. Salt mined by clawdhead (16 threads, ~10 min).
+> Vanity address mined via [Nick's CREATE2 factory](https://github.com/Arachnid/deterministic-deployment-proxy). Address reads **`0x0·C1a3D·B07`** = *clawd-bot*. Salt mined by clawdhead (16 threads, ~10 min). Contract is Base-only — CLAWD lives on Base and the swap paths are Base-specific.
 
 **ENS Name:** [`pay.clawdbotatg.eth`](https://app.ens.domains/pay.clawdbotatg.eth) → resolves to `0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad`
 
