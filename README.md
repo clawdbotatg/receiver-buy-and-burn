@@ -1,6 +1,6 @@
 # 🔥 Receiver Buy & Burn
 
-A permissionless smart contract that receives USDC, ETH, or CLAWD, swaps everything to CLAWD via Uniswap V3 on Base, and burns it to the dead address (`0x...dEaD`). Anyone can call `execute()` at any time — no owner, no admin keys, no rug risk.
+A permissionless smart contract that receives ETH, USDC, or CLAWD on Base and burns CLAWD to the dead address (`0x...dEaD`). ETH and USDC are swapped to CLAWD via Uniswap V3 first; CLAWD sent directly is burned as-is. Anyone can call `execute()` at any time — no owner, no admin keys, no rug risk.
 
 ## Contract Addresses
 
@@ -18,7 +18,7 @@ A permissionless smart contract that receives USDC, ETH, or CLAWD, swaps everyth
 2. Anyone calls `execute()`
 3. All ETH is wrapped to WETH → swapped to CLAWD via Uniswap V3 (1% fee pool)
 4. All USDC is multihop swapped: USDC → WETH (0.05% pool) → CLAWD (1% pool)
-5. Any CLAWD held directly is transferred as-is
+5. Any CLAWD held directly is sent straight to dead (no swap needed)
 6. All CLAWD ends up at `0x000000000000000000000000000000000000dEaD` — burned forever
 
 ## Key Addresses (Base)
