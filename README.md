@@ -6,10 +6,10 @@ A permissionless smart contract that receives USDC, ETH, or CLAWD, swaps everyth
 
 | Network | Address |
 |---------|---------|
-| Base    | [`0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d`](https://basescan.org/address/0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d) _(not yet deployed)_ |
-| Ethereum Mainnet | [`0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d`](https://etherscan.io/address/0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d) _(not yet deployed)_ |
+| Base    | [`0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad`](https://basescan.org/address/0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad) _(not yet deployed)_ |
+| Ethereum Mainnet | [`0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad`](https://etherscan.io/address/0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad) _(not yet deployed)_ |
 
-> Same address on every chain — deployed via [Nick's CREATE2 factory](https://github.com/Arachnid/deterministic-deployment-proxy) with a mined salt to get the `0xC1a3d` vanity prefix.
+> Same address on every chain — deployed via [Nick's CREATE2 factory](https://github.com/Arachnid/deterministic-deployment-proxy) with a mined salt. Address reads **`0x0-C1a3D-B07`** = *clawd-bot*. Mined by clawdhead (16 threads, ~10 min).
 
 **ENS Name:** TBD (`burn.clawd.eth` or similar)
 

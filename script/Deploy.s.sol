@@ -5,15 +5,16 @@ import "forge-std/Script.sol";
 import "../src/SwapAndBurn.sol";
 
 /// @notice Deploys SwapAndBurn via Nick's CREATE2 factory to get a deterministic address.
-///         Same salt + same bytecode = 0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d on ANY chain.
+///         Same salt + same bytecode = 0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad on ANY chain.
+///         Address reads: 0x0-C1a3D-B07 = "clawd-bot"
 ///
 /// Nick's factory: 0x4e59b44847b379578588920cA78FbF26c0B4956C
-/// Salt:           0x9a7ef257572e3aed4d9f06081ed3cc9f2dd9ce750e2e6744b25a63f3a9d8d74d
-/// Expected addr:  0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d
+/// Salt:           0x0786cbac0aebf290c1bba11357282c8a7ae6f3e6c83c97e753cc73bc17115007
+/// Expected addr:  0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad
 contract Deploy is Script {
     address constant NICK_FACTORY = 0x4e59b44847b379578588920cA78FbF26c0B4956C;
-    bytes32 constant SALT = 0x9a7ef257572e3aed4d9f06081ed3cc9f2dd9ce750e2e6744b25a63f3a9d8d74d;
-    address constant EXPECTED = 0x00C1a3Dc05E696B5674efb8C7DFfad333ea16d7d;
+    bytes32 constant SALT = 0x0786cbac0aebf290c1bba11357282c8a7ae6f3e6c83c97e753cc73bc17115007;
+    address constant EXPECTED = 0x0C1a3DB07304D2E4E551AB4A7b083382a33f25ad;
 
     function run() external {
         vm.startBroadcast();
