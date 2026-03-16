@@ -52,7 +52,7 @@ contract SwapAndBurn {
 
         // ── ETH → WETH → CLAWD ───────────────────────────────────────────
         uint256 ethBal = address(this).balance;
-        if (ethBal > 0) {
+        if (ethBal >= 0.001 ether) {
             IWETH(address(WETH)).deposit{value: ethBal}();
             WETH.forceApprove(address(ROUTER), ethBal);
             totalClawd += ROUTER.exactInputSingle(
@@ -70,7 +70,7 @@ contract SwapAndBurn {
 
         // ── USDC → WETH → CLAWD (multihop) ───────────────────────────────
         uint256 usdcBal = USDC.balanceOf(address(this));
-        if (usdcBal > 0) {
+        if (usdcBal >= 1e6) {
             USDC.forceApprove(address(ROUTER), usdcBal);
             bytes memory path = abi.encodePacked(
                 address(USDC),
